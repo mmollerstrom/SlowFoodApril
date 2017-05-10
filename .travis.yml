@@ -1,0 +1,22 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.4.0
+notifications:
+  email: false
+services:
+  - postgresql
+before_script:
+  - bundle exec rails db:create db:migrate
+script:
+  - bundle exec rails ci:tests
+deploy:
+  provider: heroku
+  api_key:
+    secure: kzSBJZZlQVFoRnhWYBPErQMcVI2MTWLpPEbTtaKqTBglbRA5ycFsI4VhXD47u1gzmoFPCfMT1tl2oRYpW0B8gG7YQRC3j96upxl2akKNDMBnNyalyxuKinCvm6EmjTdqjKY+K95PUJo0Gq4lxUWxOy7JmQwGz0SN1dpol0K54i+NMRjdJ4x3EDNRJoumDEl9FywZYwffnMj81QJaW0FEydcBjIijPa9tcrPIpjF/UjEtgU7vdXgO1w+j8xzLxuGhyRFpNS7EeqQTNhfCtUiRI6lQyEh4gXPefZEcX2abM6osmpcSIGVFliea0n/F3sY4Sot4Khv7J4yJBHbWaQ3/WTNHLGrXDSQrEbz2kjWSj5QlfNgllUN2VEf0oiQkAocRb7lxlf6A0/tp54KKL1spZeDjqG1tEkEC3ieqYwhYE7VgZXciBz5q0uGeUjw6JKn+4ZuzviuPsB5FO842reeepxk5CwOiM9H6eK237IgPXEWqLYxNDQC4SFPgvW8sHhZWS/8jZSIcTDsvcw3YTS4a6D5dwzA4Dg/vrI2psLoJkJuDjlDaKWch6cPp5aoSifiuHXKH5wJeO4Cv3XAnXd1Jh+QHVRYqjuls18oPXI24Ue4tARXrn2isCLkUnBKpxyjE0LHb2j3kshGLPn6ybxFz5IfdYOKqzfFh5nuuRE5d5T8=
+  app:
+    develop: sf-april-17
+  on:
+    repo: CraftAcademy/SlowFoodApril
+  run:
+    - 'rails db:migrate'
