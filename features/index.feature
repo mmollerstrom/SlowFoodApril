@@ -5,6 +5,6 @@ Feature: Landing Page content
   I would like to be presented with some examples of restaurants that deliver food
 
 Scenario:
-  When I visit the landing page
+  Given I visit the landing page
   Then I should see Restaurant "Ohms Food"
   And I should see Restaurant "Goteborg Wok Sushi"
