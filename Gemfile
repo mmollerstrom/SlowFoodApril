@@ -25,6 +25,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem "haml-rails", "~> 0.9"
 end
 
 group :development do
