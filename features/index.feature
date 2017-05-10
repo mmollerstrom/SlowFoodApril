@@ -7,4 +7,4 @@ Feature: Landing Page content
 Scenario:
   When I visit the landing page
   Then I should see Restaurant "Ohms Food"
-  And I should see "Goteborg Wok Sushi"
+  And I should see Restaurant "Goteborg Wok Sushi"
