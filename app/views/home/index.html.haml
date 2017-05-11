@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Slow Food
+  %body
+    %div
+      %ul
+        - @restaurant.each do |restaurant|
+          %li= restaurant[:name]
