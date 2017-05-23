@@ -17,9 +17,12 @@ ActiveRecord::Schema.define(version: 20170511082150) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
+    t.string   "street"
     t.string   "phone"
     t.string   "email"
+    t.string   "state"
+    t.string   "city"
+    t.string   "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

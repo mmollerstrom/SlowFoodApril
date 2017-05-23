@@ -9,9 +9,9 @@
           %li= restaurant[:name]
 
           %ul
-            %li Address: #{restaurant[:address]}
+            %li Street: #{restaurant[:street]}
             %li Email: #{restaurant[:email]}
             %li Phone: #{restaurant[:phone]}
 
 
-    #map{ style: "width: 100%; height: 400px;" }
+      #map{style: 'width: 800px; height: 400px', data: {test: {env: "#{Rails.env.test?}"}}}

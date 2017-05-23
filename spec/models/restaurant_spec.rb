@@ -4,9 +4,12 @@ RSpec.describe Restaurant, type: :model do
   describe 'DB table Restaurant' do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :name }
-    it { is_expected.to have_db_column :address }
+    it { is_expected.to have_db_column :street }
     it { is_expected.to have_db_column :email }
     it { is_expected.to have_db_column :phone }
+    it { is_expected.to have_db_column :city }
+    it { is_expected.to have_db_column :state }
+    it { is_expected.to have_db_column :country }
   end
 
   describe 'Validations' do
