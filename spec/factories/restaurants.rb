@@ -5,5 +5,6 @@ FactoryGirl.define do
     phone "MyString"
     email "MyString"
     description "MyString"
+    rest_category
   end
 end
