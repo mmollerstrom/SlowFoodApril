@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :menu do
     name "MyString"
-    restaurant nil
+    restaurant
   end
 end

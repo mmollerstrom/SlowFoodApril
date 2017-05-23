@@ -17,7 +17,7 @@ Feature: Visit the restaurant page
     Given the following menus exist
       | name                    | restaurant          |
       | Goteborg Wok Sushi Menu | Goteborg Wok Sushi  |
-      | Happy Meals             | McDonals            |
+      | Happy Meals             | McDonalds            |
 
   Scenario: Go to the restaurant's page
     Given I visit the landing page
