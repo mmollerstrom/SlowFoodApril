@@ -14,6 +14,11 @@ Feature: Visit the restaurant page
       | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! |
       | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         |
 
+    Given the following menus exist
+      | name                    | restaurant          |
+      | Goteborg Wok Sushi Menu | Goteborg Wok Sushi  |
+      | Happy Meals             | McDonals            |
+
   Scenario: Go to the restaurant's page
     Given I visit the landing page
     And I click on link "Goteborg Wok Sushi"
