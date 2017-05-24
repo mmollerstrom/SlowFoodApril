@@ -12,7 +12,7 @@ Feature: As a restaurant owner
   Scenario:
     Given I visit the landing page
     Then I should see "Restaurant Registration" link
-    And I click on the link
+    And I click on the "Restaurant Registration" link
     Then I should see "Restaurant Registration Form"
     And I fill in field "Restaurant Name" with "Bungalows"
     And I fill in field "address" with "34, Crawford Avenue"
