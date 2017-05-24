@@ -1,1 +1,29 @@
 %h2 Restaurant Registration Form
+
+= form_for :restaurant, :url => {:controller => 'restaurants', :action => 'create'} do |f|
+  .field
+    = f.label :name, "Restaurant Name"
+    %br/
+    = f.text_field :name, autofocus: true
+  .field
+    = f.label :address, "Address"
+    %br/
+    = f.text_field :address
+  .field
+    = f.label :city, "City"
+    %br/
+    = f.text_field :city
+  .field
+    = f.label :state, "State"
+    %br/
+    = f.text_field :state
+  .field
+    = f.label :country, "Country"
+  .field
+    = f.label :restaurant_category, "Restaurant Category"
+    %br/
+    = f.text_field :state
+  .field
+    = f.label :country, "Country"
+  .actions
+    = f.submit "Submit"
