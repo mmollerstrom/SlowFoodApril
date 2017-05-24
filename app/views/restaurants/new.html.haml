@@ -19,14 +19,12 @@
     = f.text_field :state
   .field
     = f.label :country, "Country"
-  .field
-    = f.label :country, "Country"
     %br/
     = f.text_field :country
   .field
-    = f.label :restaurant_category, "Restaurant Category"
+    = f.label :rest_category_id, "Restaurant Category"
     %br/
-    = f.text_field :restaurant_category
-    
+    = f.collection_select(:rest_category_id, RestCategory.all, :id, :name)
+
   .actions
     = f.submit "Submit"

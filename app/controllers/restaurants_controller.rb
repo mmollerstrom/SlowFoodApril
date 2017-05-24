@@ -13,6 +13,7 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    @restaurant_categories = RestCategory.all
   end
-  
+
 end
