@@ -8,6 +8,7 @@ Feature: As a restaurant owner
       | name      |
       | Sushi     |
       | Fast food |
+      | Mexican   |
 
   Scenario:
     Given I visit the landing page
@@ -20,4 +21,5 @@ Feature: As a restaurant owner
     And I fill in field "State" with "Gauteng"
     And I fill in field "Country" with "South Africa"
     And I choose "Fast food" from drop-down "Restaurant Category"
-    Then I should see "Your restaurant has been successfuly registered"
+    And I click on button "Submit"
+    Then I should see "Your restaurant has been sucessfully registered"

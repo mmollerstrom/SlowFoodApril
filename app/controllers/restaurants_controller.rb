@@ -13,7 +13,22 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    @restaurant_categories = RestCategory.all
   end
+
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+    if @restaurant.save
+      redirect_to root_path
+      flash[:notice] = "Your restaurant has been sucessfully registered!"
+    else
+      flash[:error] = "Ooops!! something is wrong"
+    end
+  end
+
+private
+
+def restaurant_params
+  params.require(:restaurant).permit(:name, :address, :city, :state, :country, :rest_category_id)
+end
 
 end

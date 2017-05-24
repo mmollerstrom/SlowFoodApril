@@ -1,5 +1,5 @@
 %h2 Restaurant Registration Form
-
+-#
 = form_for :restaurant, :url => {:controller => 'restaurants', :action => 'create'} do |f|
   .field
     = f.label :name, "Restaurant Name"
@@ -25,6 +25,7 @@
     = f.label :rest_category_id, "Restaurant Category"
     %br/
     = f.collection_select(:rest_category_id, RestCategory.all, :id, :name)
-
   .actions
     = f.submit "Submit"
+    %p
+      = flash[:notice]
