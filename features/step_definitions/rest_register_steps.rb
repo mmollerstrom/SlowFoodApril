@@ -6,8 +6,8 @@ Then(/^I click on the "([^"]*)" link$/) do |link|
   click_link(link)
 end
 
-Given(/^the following user exist$/) do |table|
-  table.hashes.each do |hash|
-    FactoryGirl.create(:user, hash)
-  end
+Given(/^I am logged in with "([^"]*)", password '(\d+)' and password_confirmation '(\d+)'$/) do |email, pwd, pwd_confirm|
+  current_user = FactoryGirl.create(:user, email: email, password: pwd, password_confirmation: pwd_confirm )
+  login_as(current_user, scope: :user)
+  visit root_path
 end
