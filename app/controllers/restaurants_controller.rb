@@ -13,6 +13,8 @@ class RestaurantsController < ApplicationController
   end
 
   def new
+    @restaurant = Restaurant.new
+    @categories = RestCategory.all
   end
 
   def create
@@ -21,14 +23,14 @@ class RestaurantsController < ApplicationController
       redirect_to root_path
       flash[:notice] = "Your restaurant has been sucessfully registered!"
     else
-      flash[:error] = "Ooops!! something is wrong"
+      render "new"
     end
   end
 
-private
+  private
 
-def restaurant_params
-  params.require(:restaurant).permit(:name, :address, :city, :state, :country, :rest_category_id)
-end
+  def restaurant_params
+  params.require(:restaurant).permit(:name, :address, :city, :province, :country, :rest_category_id)
+  end
 
 end
