@@ -7,7 +7,7 @@ Feature: As a restaurant owner
       Given the following restaurant owner credentials exist
         | email               | password       | password_confirmation | restaurant_owner        |
         | max@mollerstrom     | 12345678       | 12345678              | true                    |
-        | joe@doe.com         | 12345678       | 12345678              | false                   |
+      And I am logged in as "max@mollerstrom.com", password "12345678"
       And I visit the landing page
       And I click on link "Log In"
       And I fill in field "E-mail" with "max@mollerstrom"
