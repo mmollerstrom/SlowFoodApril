@@ -1,26 +1,30 @@
 Feature: As a restaurant owner
-  In order to administer my restaurant (menu, dishes etc.)
-  I need a login that gives me restaurant owner rights
-
+  In order to categorise the dishes
+  I would like to be able to create my own menus
 
     Background:
-      Given the following restaurant owner credentials exist
-        | email               | password       | password_confirmation | restaurant_owner        |
-        | max@mollerstrom     | 12345678       | 12345678              | true                    |
-      And I am logged in as "max@mollerstrom.com", password "12345678"
-      And I visit the landing page
-      And I click on link "Log In"
-      And I fill in field "E-mail" with "max@mollerstrom"
-      And I fill in field "Password" with "12345678"
-      And I click on button "Log in"
-      Then I should see link "View My Restaurant Page"
+      Given the following restaurant categories exist
+        | name      |
+        | Sushi     |
+        | Fast food |
 
+      And the following users exist:
+        | email           | password | password_confirmation |restaurant_owner  |
+        | o.dania@aol.com | 12345678 | 12345678              |true              |
+
+      And the following restaurants exist
+        | name                | address           | email               | phone         | rest_category | description             | owner           |
+        | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! | o.dania@aol.com |
+        | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         | o.dania@aol.com |
+
+      And I am logged in as "o.dania@aol.com"
 
     Scenario: Add Menu on Restaurant Owner Page
-      Given I click on "View My Restaurant Page"
-      Then I should visit
-      And  I click on link "Log In"
-      And I fill in field "E-mail" with "joe@doe.com"
-      And I fill in field "Password" with "12345678"
-      And I click on button "Log in"
-      Then I should not see "View My Restaurant Dashboard"
+      Then Show page
+      Given I click on link "View My Restaurant Page"
+      Then I should visit my restaurant page
+      And  I click on link "Create Menu"
+      Then I should see "New Menu Form"
+      And I fill in field "Menu Name" with "Orchid Bistro"
+      And I click on button "Create"
+      Then I should see "Orchid Bistro"
