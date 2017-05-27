@@ -6,8 +6,7 @@ class User::RestaurantsController < ApplicationController
   end
 
   def show
-    # @restaurant = Restaurant.find(params[:id])
+    @restaurant_id = params[:id]
+    @user_id = params[:user_id]
   end
-
-
 end

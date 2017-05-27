@@ -22,11 +22,10 @@ Feature: As a restaurant owner
     Scenario: Add Menu on Restaurant Owner Page
       Given I click on link "View My Restaurant Page"
       Then I should visit "o.dania@aol.com" restaurants page
-      Then Show page
       And I click on link "McDonalds"
-      Then I should visit "McDonalds" admin page 
-      And I click on button "Create Menu"
+      Then I should visit "McDonalds" admin page
+      And I click on link "Create Menu"
       Then I should see "New Menu Form"
       And I fill in field "Menu Name" with "Orchid Bistro"
       And I click on button "Create"
-      Then I should see "Orchid Bistro"
+      Then I should see "Menu added"
