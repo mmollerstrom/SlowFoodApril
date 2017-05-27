@@ -1,7 +1,7 @@
 %div
   %ul
     - @restaurants.each do |restaurant|
-      %li= link_to (restaurant.name)
+      %li= link_to (restaurant.name), user_restaurant_path(@user, restaurant)
       %ul
         %li Address: #{restaurant.address}
         %li Email: #{restaurant.email}
