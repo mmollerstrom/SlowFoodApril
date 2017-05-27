@@ -1,5 +1,7 @@
-Then(/^I should visit my restaurant page$/) do
-  visit '/restaurants#index'
+Then(/^I should visit "([^"]*)" restaurant page$/) do |email|
+  user = User.find_by(email: email)
+  current_user = user.id
+  visit user_restaurants_path(current_user)
 end
 
 Given(/^the following users exist:$/) do |table|

@@ -20,10 +20,10 @@ Feature: As a restaurant owner
       And I am logged in as "o.dania@aol.com"
 
     Scenario: Add Menu on Restaurant Owner Page
-      Then Show page
       Given I click on link "View My Restaurant Page"
-      Then I should visit my restaurant page
-      And  I click on link "Create Menu"
+      Then I should visit "o.dania@aol.com" restaurant page
+      And I click on link "McDonalds"
+      And I click on link "Create Menu"
       Then I should see "New Menu Form"
       And I fill in field "Menu Name" with "Orchid Bistro"
       And I click on button "Create"
