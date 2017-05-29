@@ -9,4 +9,5 @@ The site is allowing users to find listed restaurants and look at their menus an
 The user can filter and find restaurants by category.
 The user can create an account. Doing this will allow the user to create a restaurant.
 
+
 More features to come...
