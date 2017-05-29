@@ -3,20 +3,7 @@ Feature: As a restaurant owner
   I would like to be able to create my own menus
 
     Background:
-      Given the following restaurant categories exist
-        | name      |
-        | Sushi     |
-        | Fast food |
-
-      And the following users exist:
-        | email           | password | password_confirmation |restaurant_owner  |
-        | o.dania@aol.com | 12345678 | 12345678              |true              |
-
-      And the following restaurants exist
-        | name                | address           | email               | phone         | rest_category | description             | owner           |
-        | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! | o.dania@aol.com |
-        | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         | o.dania@aol.com |
-
+      Given "o.dania@aol.com" exists and has a number of restaurants
       And I am logged in as "o.dania@aol.com"
 
     Scenario: Add Menu on Restaurant Owner Page
