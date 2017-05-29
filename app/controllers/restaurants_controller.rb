@@ -19,6 +19,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.user_id = current_user.id
     if @restaurant.save
       redirect_to root_path
       flash[:notice] = "Your restaurant has been sucessfully registered!"
@@ -36,7 +37,8 @@ class RestaurantsController < ApplicationController
             :city,
             :province,
             :country,
-            :rest_category_id)
+            :rest_category_id,
+            )
   end
 
 end

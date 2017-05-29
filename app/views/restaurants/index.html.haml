@@ -1,5 +1,5 @@
 - if user_signed_in?
-  = link_to "Are you a restaurant owner? Click to register your restaurant", new_user_restaurant_path(current_user)
+  = link_to "Are you a restaurant owner? Click to register your restaurant", new_restaurant_path
 - if user_signed_in? && current_user.restaurant_owner?
   = link_to "View My Restaurant Page", user_restaurants_path(current_user)
 %div

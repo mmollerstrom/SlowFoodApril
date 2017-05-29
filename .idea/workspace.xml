@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81693838-5636-4bc8-82dc-2f3c7a8b5319" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/restaurant.rb" afterPath="$PROJECT_DIR$/app/models/restaurant.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurants/index.html.haml" afterPath="$PROJECT_DIR$/app/views/restaurants/index.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/create_menu.feature" afterPath="$PROJECT_DIR$/features/create_menu.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/rest_register.feature" afterPath="$PROJECT_DIR$/features/rest_register.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/index_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/index_steps.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/restaurant_spec.rb" afterPath="$PROJECT_DIR$/spec/models/restaurant_spec.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -31,7 +23,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1495924478000" expanded="true" signature="121:353" ph="Background" />
+                <marker date="1495924478000" expanded="true" signature="1457:1458" ph="Scenario: Add Menu on Restaurant Owner Page" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -317,16 +312,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495880492972</updated>
-      <workItem from="1495880500563" duration="41000" />
+      <workItem from="1495880500563" duration="1100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41000" />
+    <option name="totallyTimeSpent" value="1100000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="23" width="1073" height="731" extended-state="1" />
-    <editor active="true" />
+    <frame x="91" y="23" width="1073" height="731" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -363,7 +357,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1495924478000" expanded="true" signature="121:353" ph="Background" />
+            <marker date="1495924478000" expanded="true" signature="1457:1458" ph="Scenario: Add Menu on Restaurant Owner Page" />
+          </folding>
         </state>
       </provider>
     </entry>

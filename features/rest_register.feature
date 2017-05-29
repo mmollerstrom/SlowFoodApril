@@ -10,7 +10,7 @@ Feature: As a restaurant owner
       | Mexican   |
 
   Scenario:
-    Given I am logged in with "o.dania@aol.com", password '12345678' and password_confirmation '12345678' 
+    Given I am logged in with "o.dania@aol.com", password '12345678' and password_confirmation '12345678'
     And I click on the "Are you a restaurant owner? Click to register your restaurant" link
     Then I should see "Restaurant Registration Form"
     And I fill in field "Restaurant Name" with "Bungalows"

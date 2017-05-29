@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get '/user/:user_id/restaurants', to: 'user/restaurants#index', as:'user_restaurants'
   get '/user/:user_id/restaurants/:id', to: 'user/restaurants#show', as:'user_restaurant'
-  
-  resources :restaurants, only: [:index, :show]
+
+  resources :restaurants, only: [:index, :show, :new, :create]
 
   resources :user, only: [:show] do
     resources :restaurants, only: [:show, :create, :new] do

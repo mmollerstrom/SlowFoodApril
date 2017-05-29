@@ -10,9 +10,9 @@ Feature: Visit the restaurant page
       | Fast food |
 
     Given the following restaurants exist
-      | name                | address           | email               | phone         | rest_category | description             |
-      | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! |
-      | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         |
+      | name                | address           | email               | phone         | rest_category | description             |owner            |
+      | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! |o.dania@aol.com  |
+      | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         |o.dania@aol.com  |
 
     Given the following menus exist
       | name                    | restaurant          |
