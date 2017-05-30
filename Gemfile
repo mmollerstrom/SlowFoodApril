@@ -29,6 +29,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'launchy'
+  gem "haml-rails", "~> 0.9"
 end
 
 group :development do
