@@ -1,6 +1,5 @@
 %h2 Restaurant Registration Form
 = form_for @restaurant  do |f|
-  - binding.pry
   - if @restaurant.errors.any?
     - @restaurant.errors.full_messages.each do |message|
       = message

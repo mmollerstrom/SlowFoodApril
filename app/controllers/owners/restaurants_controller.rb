@@ -6,8 +6,7 @@ class Owners::RestaurantsController < ApplicationController
   end
 
   def show
-    binding.pry
     @restaurant_id = params[:id]
-    @owner_id = current_user.id #params[:user_id]
+    @owner_id = current_user.id
   end
 end
