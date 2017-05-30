@@ -1,4 +1,4 @@
-Given(/^I should visit "([^"]*)" restaurants page$/) do |email|
+Given(/^I visit "([^"]*)" restaurants page$/) do |email|
   user = User.find_by(email: email)
   current_user = user.id
   visit owners_restaurants_path(current_user)

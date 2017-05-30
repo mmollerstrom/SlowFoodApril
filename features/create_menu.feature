@@ -8,7 +8,7 @@ Feature: As a restaurant owner
 
     Scenario: Add Menu on Restaurant Owner Page
       Given I click on link "View My Restaurant Page"
-      Then I should visit "o.dania@aol.com" restaurants page
+      And I visit "o.dania@aol.com" restaurants page
       And I click on link "McDonalds"
       And I click on link "Create Menu"
       And I fill in field "Menu Name" with "Orchid Bistro"
