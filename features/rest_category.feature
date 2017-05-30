@@ -3,7 +3,7 @@ Feature: As a visitor/user
   I should be able to select and see restaurant's by category
 
   Background:
-    Given "benji@teabags.com" exists and has a number of restaurants
+    Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
     Given I visit the landing page
     And I choose "Sushi" from drop-down "category_id"

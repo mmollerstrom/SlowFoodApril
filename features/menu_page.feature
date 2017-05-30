@@ -4,7 +4,7 @@ Feature: Visit the restaurant page
   I would like to be able to visit a menu page and see the restaurants menu name
 
   Background:
-    Given "benji@teabags.com" exists and has a number of restaurants
+    Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
     Given the following menus exist
       | name                    | restaurant          |

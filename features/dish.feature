@@ -4,7 +4,7 @@ Feature: Add dishes to menu
   I would like to see many dishes in the restaurant´s menu
 
   Background:
-    Given "max@beach_and_crusing.com" exists and has a number of restaurants
+    Given "max@beach_and_crusing.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
     Given the following menus exist
       | name                    | restaurant          |

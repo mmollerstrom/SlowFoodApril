@@ -3,7 +3,7 @@ Feature: As a restaurant owner
   I would like to be able to create my own menus
 
     Background:
-      Given "o.dania@aol.com" exists and has a number of restaurants
+      Given "o.dania@aol.com" exists and has 2 restaurants belonging to 2 restaurant categories
       And I am logged in as "o.dania@aol.com"
 
     Scenario: Add Menu on Restaurant Owner Page

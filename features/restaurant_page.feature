@@ -4,7 +4,7 @@ Feature: Visit the restaurant page
   I would like to visit the restaurants page
 
   Background:
-    Given "benji@teabags.com" exists and has a number of restaurants
+    Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
   Scenario: Go to the restaurant's page
     Given I visit the landing page
