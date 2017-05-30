@@ -1,7 +1,7 @@
 Then(/^I should visit "([^"]*)" restaurants page$/) do |email|
   user = User.find_by(email: email)
   current_user = user.id
-  visit user_restaurants_path(current_user)
+  visit owners_restaurants_path(current_user)
 end
 
 Given(/^the following users exist:$/) do |table|

@@ -1,5 +1,5 @@
 %h2 New Menu Form
-= form_for([@user, @restaurant, @menu]) do |f|
+= form_for([:owners, @restaurant, @menu]) do |f|
   .field
     = f.label :name, "Menu Name"
     %br/
