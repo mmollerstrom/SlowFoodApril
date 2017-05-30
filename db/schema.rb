@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524122936) do
+ActiveRecord::Schema.define(version: 20170525194517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dishes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "menu_id"
+    t.index ["menu_id"], name: "index_dishes_on_menu_id", using: :btree
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "restaurant_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["restaurant_id"], name: "index_menus_on_restaurant_id", using: :btree
+  end
 
   create_table "rest_categories", force: :cascade do |t|
     t.string   "name"
@@ -30,6 +48,9 @@ ActiveRecord::Schema.define(version: 20170524122936) do
     t.datetime "updated_at",       null: false
     t.string   "description"
     t.integer  "rest_category_id"
+    t.string   "city"
+    t.string   "province"
+    t.string   "country"
     t.index ["rest_category_id"], name: "index_restaurants_on_rest_category_id", using: :btree
   end
 
@@ -52,9 +73,12 @@ ActiveRecord::Schema.define(version: 20170524122936) do
     t.string   "address"
     t.string   "phone_number"
     t.boolean  "admin",                  default: false
+    t.boolean  "restaurant_owner",       default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "dishes", "menus"
+  add_foreign_key "menus", "restaurants"
   add_foreign_key "restaurants", "rest_categories"
 end
