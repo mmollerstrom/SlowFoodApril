@@ -17,4 +17,6 @@ Rails.application.routes.draw do
       resources :menus, only: [:show, :index, :create, :new]
     end
   end
+
+  get '/add_to_cart/:dish_id/:restaurant_id', to: 'carts#add_to_cart', as: 'add_to_cart'
 end
