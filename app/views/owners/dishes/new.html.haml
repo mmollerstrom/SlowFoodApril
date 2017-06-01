@@ -1,0 +1,18 @@
+%h2 Add New Dish
+= form_for([:owners, @restaurant, @menu, @dish]) do |f|
+  .field
+    = f.label :name, "Dish Name"
+    %br/
+    = f.text_field :name, autofocus: true
+  .field
+    = f.label :description, "Dish Description"
+    %br/
+    = f.text_field :description
+  .field
+    = f.label :price, "Price"
+    %br/
+    = f.text_field :price
+  .actions
+    = f.submit "Add Dish"
+    %p
+      = flash[:notice]
