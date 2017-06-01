@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   namespace 'owners' do
     resources :restaurants, only: [:index, :show, :create, :new] do
       resources :menus, only: [:show, :index, :create, :new, :update, :edit, :destroy] do
-        resources :dishes, only: [:new, :create, :show]
+        resources :dishes, only: [:new, :create, :show, :index]
       end
     end
   end
