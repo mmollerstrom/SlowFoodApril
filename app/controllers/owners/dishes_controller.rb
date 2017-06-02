@@ -1,8 +1,8 @@
 class Owners::DishesController < ApplicationController
 
   def index
-    
   end
+
   def new
     @menu = Menu.find(params[:menu_id])
     @restaurant = Restaurant.find(params[:restaurant_id])

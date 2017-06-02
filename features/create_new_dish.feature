@@ -1,6 +1,6 @@
 Feature: As a restaurant owner
-In order to display my dishes to visitors
-I would like to create dishes
+  In order to display my dishes to visitors
+  I would like to create dishes
 
   Background:
     Given "o.dania@aol.com" exists and has 2 restaurants belonging to 2 restaurant categories
