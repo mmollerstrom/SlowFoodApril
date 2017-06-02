@@ -12,7 +12,7 @@ I would like to create dishes
       | Breakfast menu          | McDonalds           |
       | Orchid Bistro           | McDonalds           |
 
-  Scenario: Add Menu on Restaurant Owner Page
+  Scenario: Add Dish to Menu
     Given I click on link "View My Restaurant Page"
     And I visit "o.dania@aol.com" restaurants page
     And I click on link "McDonalds"
