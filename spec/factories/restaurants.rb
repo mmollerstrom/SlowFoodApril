@@ -12,6 +12,5 @@ FactoryGirl.define do
     description "MyString"
     rest_category
     user
-    # association :menu
   end
 end
