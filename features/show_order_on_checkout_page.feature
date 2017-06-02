@@ -8,6 +8,8 @@ Feature: Show order on checkout page
 
   Scenario: View order on checkout page
 
+    Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
+
     And the following menus exist
       | name                    | restaurant          |
       | Sushi Menu              | Goteborg Wok Sushi  |
