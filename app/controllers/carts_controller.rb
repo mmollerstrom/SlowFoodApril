@@ -7,4 +7,9 @@ class CartsController < ApplicationController
     redirect_to restaurant_menus_path(@restaurant_id)
     flash[:notice] = "#{dish.name} added to cart"
   end
+
+  def checkout
+    @items = session[:cart]
+    binding.pry
+  end
 end
