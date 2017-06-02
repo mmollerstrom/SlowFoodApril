@@ -3,9 +3,6 @@ Feature: Show order on checkout page
   In order to see what I am ordering
   I would like to see a summary of my order on the checkout page
 
-  Background:
-    # Given there are dishes in my cart
-
   Scenario: View order on checkout page
 
     Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
