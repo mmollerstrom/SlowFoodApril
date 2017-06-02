@@ -10,6 +10,10 @@ class CartsController < ApplicationController
 
   def checkout
     @items = session[:cart]
+    @total_price = 0
+    @items.each do |item|
+      @total_price += item['price']
+    end
     binding.pry
   end
 end
