@@ -14,6 +14,5 @@ class CartsController < ApplicationController
     @items.each do |item|
       @total_price += item['price']
     end
-    binding.pry
   end
 end
