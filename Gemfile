@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'geocoder'
 gem 'devise'
 gem 'rack-cors', require: 'rack/cors'
+gem 'stripe'
 
 group :development, :test do
   gem 'coveralls', require: false

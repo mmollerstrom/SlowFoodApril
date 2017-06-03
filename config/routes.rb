@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   get '/add_to_cart/:dish_id/:restaurant_id', to: 'carts#add_to_cart', as: 'add_to_cart'
   get '/cart', to: 'carts#checkout', as: 'checkout'
+
+  resources :charges
 end

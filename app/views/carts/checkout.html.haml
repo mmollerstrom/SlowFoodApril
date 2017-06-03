@@ -5,3 +5,4 @@
     %li Dish: #{item['name']}
     %li Price: #{item['price']}
 %h5 Total price: #{@total_price}
+= link_to 'Pay order', new_charge_path
