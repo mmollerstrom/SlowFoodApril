@@ -38,5 +38,8 @@ Feature: payment method
     Given I am logged in as "joe@doe.com"
     And I click on link "Cart"
     And I click on link "Pay order"
+
+    @javascript @stripe
+    Scenario:
     And I fill out checkout form with email "joe@doe.com" and cc no "4242424242424242" and expdate with "07/33" and cvc "999" and I click submit
     Then I should see "Thank you for your purchase"
