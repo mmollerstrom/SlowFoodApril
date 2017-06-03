@@ -9,61 +9,56 @@
 
 
 
-
+users= User.create([{ email: 'abc@b.com',
+                      password: '12345678',
+                      password_confirmation: '12345678',
+                      username: 'abc',
+                      first_name: 'Big',
+                      last_name: 'Ben',
+                      address: '123 Other St',
+                      phone_number: '770-555-1234' }])
 rest_cats = RestCategory.create([{ name: 'Sushi' }, { name: 'Fast food' }])
 restaurants = Restaurant.create([{ name: 'Backyard burger',
-                                address: '123 Main St',
-                                city: 'Dallas', province: 'Texas',
-                                country: 'USA',
-                                rest_category: rest_cats.last },
-                                { name: 'Sushi Palace',
-                                address: '123 Storgatan',
-                                city: 'Stockholm', province: 'Stockholm',
-                                country: 'Sweden',
-                                rest_category: rest_cats.first},
-                                { name: 'Cool Food',
-                                address: '321 Main St',
-                                city: 'Pretoria', province: 'Gauteng',
-                                country: 'South Africa',
-                                rest_category: rest_cats.last}])
+                                   address: '123 Main St',
+                                   city: 'Dallas', province: 'Texas',
+                                   country: 'USA',
+                                   rest_category: rest_cats.last,
+                                   user: users.first },
+                                 { name: 'Sushi Palace',
+                                   address: '123 Storgatan',
+                                   city: 'Stockholm', province: 'Stockholm',
+                                   country: 'Sweden',
+                                   rest_category: rest_cats.first,
+                                   user: users.first },
+                                 { name: 'Cool Food',
+                                   address: '321 Main St',
+                                   city: 'Pretoria', province: 'Gauteng',
+                                   country: 'South Africa',
+                                   rest_category: rest_cats.last,
+                                   user: users.first }])
 menus = Menu.create([{ name: 'Breakfast', restaurant: restaurants.first },
                      { name: 'Breakfast', restaurant: restaurants.last },
                      { name: 'Sushi menu', restaurant: restaurants[1] },
                      { name: 'Dinner', restaurant: restaurants.first },
                      { name: 'Burgers', restaurant: restaurants.last }])
-
-
-
-
-
-
-
-Given the following restaurant categories exist
-  | name      |
-  | Sushi     |
-  | Fast food |
-
-And the following users exist:
-  | email           | password | password_confirmation |restaurant_owner  |
-  | #{user_email}   | 12345678 | 12345678              |true              |
-
-And the following restaurants exist
-  | name                | address           | email               | phone         | rest_category | description             | owner           |
-  | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! | #{user_email}   |
-  | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         | #{user_email}   |
-}
-
-
-Given the following menus exist
-  | name                    | restaurant          |
-  | Sushi Menu              | Goteborg Wok Sushi  |
-  | Burgers                 | McDonalds           |
-  | Breakfast menu          | McDonalds           |
-  | Sushi Menu              | McDonalds           |
-
-Given the following dishes exist
-  | name                    | description                             | price      | menu                      | restaurant           |
-  | 7 piece sushi           | Salmon and avocado sushi pieces         | 10         | Sushi Menu                | Goteborg Wok Sushi   |
-  | Giant Burger            | A burger with cheese and lettuce        | 150        | Burgers                   | McDonalds      |
-  | Quarter Pounder Cheese  | A burger with too much cheese           | 2000       | Burgers                   | McDonalds      |
-  | Coffe                   | Not from Colombia                       | 2500       | Sushi Menu                | McDonalds      |
+dishes = Dish.create([{ name: 'Bacon scramled eggs', price: 1000,
+                        description: 'Great breakfast!',
+                        menu: menus.first },
+                      { name: 'Big burger', price: 2000,
+                        description: 'Largest burger in town!',
+                        menu: menus[3] },
+                      { name: 'Best burger', price: 25000,
+                        description: 'For the ones with finer taste',
+                        menu: menus.last },
+                      { name: 'My way', price: 1500,
+                        description: 'The dish is served your way',
+                        menu: menus.last },
+                      { name: 'Hello food', price: 14000,
+                        description: 'Enjoy it!',
+                        menu: menus[2] },
+                      { name: 'Ham sandwich', price: 1500,
+                        description: 'Cool food',
+                        menu: menus[1] },
+                      { name: 'Cool burger', price: 10000,
+                        description: 'Served with ice.',
+                        menu: menus[3] }])
