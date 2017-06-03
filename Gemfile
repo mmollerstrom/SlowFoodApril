@@ -31,6 +31,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'poltergeist'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 group :development do

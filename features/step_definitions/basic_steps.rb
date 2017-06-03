@@ -30,6 +30,12 @@ Given(/^I click on button "([^"]*)"$/) do |button_name|
   click_button button_name
 end
 
+Given(/^the following user credentials exist$/) do |table|
+  table.hashes.each do |hash|
+    FactoryGirl.create(:user, hash)
+  end
+end
+
 Given(/^"([^"]*)" exists and has 2 restaurants belonging to 2 restaurant categories$/) do |user_email|
   steps %{
     Given the following restaurant categories exist
