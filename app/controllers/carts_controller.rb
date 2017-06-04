@@ -7,4 +7,12 @@ class CartsController < ApplicationController
     redirect_to restaurant_menus_path(@restaurant_id)
     flash[:notice] = "#{dish.name} added to cart"
   end
+
+  def checkout
+    @items = session[:cart]
+    @total_price = 0
+    @items.each do |item|
+      @total_price += item['price']
+    end
+  end
 end
