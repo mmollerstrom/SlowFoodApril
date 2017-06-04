@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'geocoder'
 gem 'devise'
 gem 'rack-cors', require: 'rack/cors'
+gem "paperclip", "~> 5.0.0.beta1"
 
 group :development, :test do
   gem 'coveralls', require: false

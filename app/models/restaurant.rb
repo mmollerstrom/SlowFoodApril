@@ -22,4 +22,5 @@ class Restaurant < ApplicationRecord
   def address_city_province_country_present?
     address.present? && city.present? && province.present? && country.present?
   end
+
 end

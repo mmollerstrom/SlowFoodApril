@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526143220) do
+ActiveRecord::Schema.define(version: 20170604153337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,13 @@ ActiveRecord::Schema.define(version: 20170526143220) do
     t.string   "name"
     t.string   "description"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "menu_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.index ["menu_id"], name: "index_dishes_on_menu_id", using: :btree
   end
 
@@ -48,11 +52,12 @@ ActiveRecord::Schema.define(version: 20170526143220) do
     t.datetime "updated_at",       null: false
     t.string   "description"
     t.string   "city"
-    t.string   "province"
+    t.string   "state"
     t.string   "country"
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "rest_category_id"
+    t.string   "province"
     t.integer  "user_id"
     t.index ["rest_category_id"], name: "index_restaurants_on_rest_category_id", using: :btree
     t.index ["user_id"], name: "index_restaurants_on_user_id", using: :btree
